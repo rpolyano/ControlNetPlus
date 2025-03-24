@@ -35,6 +35,7 @@ from diffusers.loaders import (
     IPAdapterMixin,
     StableDiffusionXLLoraLoaderMixin,
     TextualInversionLoaderMixin,
+    FromSingleFileMixin
 )
 from diffusers.models import AutoencoderKL, ImageProjection, UNet2DConditionModel
 from controlnetplus.models.controlnet_union import ControlNetModel_Union
@@ -163,6 +164,7 @@ class StableDiffusionXLControlNetUnionImg2ImgPipeline(
     TextualInversionLoaderMixin,
     StableDiffusionXLLoraLoaderMixin,
     IPAdapterMixin,
+    FromSingleFileMixin,
 ):
     r"""
     Pipeline for image-to-image generation using Stable Diffusion XL with ControlNet guidance.

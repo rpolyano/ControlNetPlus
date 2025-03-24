@@ -1,0 +1,30 @@
+[project]
+name = "controlnetplus"
+version = "0.1.0"
+description = "ControlNet++: All-in-one ControlNet for image generations and editing!"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0",
+    "torchvision>=0.21.0",
+    "transformers>=4.49.0",
+    "controlnet-aux>=0.0.9",
+    "diffusers>=0.32.2",
+    "opencv-python>=4.11.0.86",
+    "pillow>=11.0.0",
+]
+
+
+[tool.uv.sources]
+torch = { index = "rocm624" }
+torchvision = { index = "rocm624" }
+torchaudio = { index = "rocm624" }
+
+[[tool.uv.index]]
+name = "rocm624"
+url = "https://download.pytorch.org/whl/rocm6.2.4"
+
+[[tool.uv.index]]
+name = "cuda124"
+url = "https://download.pytorch.org/whl/cu124"
